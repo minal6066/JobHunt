@@ -40,7 +40,7 @@ class ApplyJobModal extends Component{
 		this.props.isClose()
 	};
 	clickSubmit = (data) =>{
-		console.log(data)
+		console.log(data, "Dataaaaa12345")
 		this.props.uploaded(true)
 		this.props.isClose()
 		data.map((val) => {
@@ -58,7 +58,8 @@ class ApplyJobModal extends Component{
 				}
 			})
 			.catch((err) =>
-				message.error("Something went wrong.")
+				// message.error("Something went wrong.")
+				console.log("Something went wrong")
 			);
 		});
 		this.props.uploaded(false)

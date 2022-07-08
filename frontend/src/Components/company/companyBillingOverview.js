@@ -153,7 +153,7 @@ class companyBillingOverview extends Component {
                           Monthly Payment
                       </p>
                         <p className="site-card-wrapper-2" style={{ margin: 0 }}>
-                          {`$ ${data.totalCount * 15}`}
+                          {` ${data.totalCount * 15}`}
                         </p>
                       </div>
                     </div>
@@ -245,7 +245,7 @@ class companyBillingOverview extends Component {
                           </p>
                         </Col>
                         <Row className="billing_amount_overview">
-                          ${data.price}
+                          {data.price}
                         </Row>
                         <Row className="billing-overview-detail">
                           {/* <Col span={4}>

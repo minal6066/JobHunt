@@ -24,7 +24,7 @@ class JobCards extends Component {
           : appliedJobsData &&
             appliedJobsData
               .filter((data) =>
-              data.candidate.current_position.startsWith(
+              data?.candidate?.current_position.startsWith(
                   searchingValue.toLowerCase()
                 )
               )

@@ -19,16 +19,14 @@ class ResumeModal extends Component{
 			initialValues:{title:"",description:""}
 		}
 	}
-	onChange = ( newFileList) =>{
-  		this.setState({resume_file:newFileList,resume:newFileList.name})
-  		// console.log(this.toBase64(newFileList))
-  	}
+
 	CandidateResumeUpload = (data) =>{
-		let resume = this.state.resume_file;
-		if(resume !== ""){
+		// let resume = this.state.resume_file;
+		if(1){
 			let formdata = new FormData();
-			formdata.append("candidateResume",resume,resume.name)
+			// formdata.append("candidateResume",resume,resume.name)
 			formdata.append("title", data.title)
+			formdata.append("resume_link", data.resume_link)
 			formdata.append("description", data.description)
 			APIManager.CandidateResume(formdata)
 			.then((response) => {
@@ -107,7 +105,8 @@ class ResumeModal extends Component{
 			        <form onSubmit={formikProps.handleSubmit}>
 	        			<Row>
 							<label className="input_label_profile w-100">File</label>
-								<label className="custom-file-label-1 resume-upload-card-1 m-0">
+
+								{/* <label className="custom-file-label-1 resume-upload-card-1 m-0">
 							    <input 
 							    	type="file" 
 							    	name="attachment"
@@ -123,13 +122,29 @@ class ResumeModal extends Component{
 							    	<p className="name-of-resume-file">{this.state.resume}</p>):(
 							    <p className="name-of-resume-file">UPLOAD RESUME</p>
 							    )}
-							    </label>
+							    </label> */}
 							    
 							{errors.attachment && (
 		                        <div style={{ color: "red", fontSize: "12px" }}>
 		                          {errors.attachment}
 		                        </div>
 		                      )}
+						</Row>
+						<Row>
+							<label className="input_label_profile">Resume Link</label>
+							<Input 
+								type="text" 
+								name="resume_link"
+								value={values.resume}
+								className="input-field-custom-type-1-left" 
+								id="inputPassword" 
+								onChange={handleChange}
+								placeholder="Resume Link" required />
+							{errors.resume && (
+		                        <div style={{ color: "red", fontSize: "12px" }}>
+		                          {errors.resume}
+		                        </div>
+		                    )}
 						</Row>
 	        			<Row>
 							<label className="input_label_profile">Title</label>

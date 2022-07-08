@@ -118,7 +118,7 @@ class SideNav extends Component{
 							}
 							</NavLink>
 						</ul>
-						<h6 className="margin-top-for-side-nav-head bold-family profile-head-font">Consulting</h6>
+						{/* <h6 className="margin-top-for-side-nav-head bold-family profile-head-font">Consulting</h6>
 						<ul id="menu-content" className="menu-content out">
 							<NavLink to={"/Company_Resume"}>
 							{ isresume ? 
@@ -142,7 +142,7 @@ class SideNav extends Component{
 								</li>
 							}
 							</NavLink>
-						</ul>
+						</ul> */}
 						<h6 className="margin-top-for-side-nav-head bold-family profile-head-font">Business</h6>
 						<ul id="menu-content" className="menu-content out">
 							<NavLink to={"/company/services"}>
@@ -201,7 +201,7 @@ class SideNav extends Component{
 							}
 							</NavLink>
 						</ul>
-						<h6 className="margin-top-for-side-nav-head bold-family profile-head-font">Contact</h6>
+						{/* <h6 className="margin-top-for-side-nav-head bold-family profile-head-font">Contact</h6>
 						<ul id="menu-content" className="menu-content out">
 							<NavLink to={"/company-mailbox"}>
 							{ ismailbox ?
@@ -214,7 +214,7 @@ class SideNav extends Component{
 								</li>
 							}
 							</NavLink>
-						</ul>
+						</ul> */}
 					</div>
 				</div>
 			</Row>

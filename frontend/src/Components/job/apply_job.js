@@ -95,10 +95,12 @@ class ApplyJob extends Component {
   componentDidMount() {
     const id = this.props.location.state.jobId;
     APIManager.getJobDescription(id).then((resp) => {
+      console.log(id, "Job desc IDDDDD")
       if (resp.status === 200)
         this.setState({
           isIntersted: resp.data.isInterested,
           isLoading: false,
+          id : id
         });
     });
   }
@@ -153,7 +155,7 @@ class ApplyJob extends Component {
 
   uploaded = (spinner) => {
     this.setState({ spinner: spinner });
-    this.refreshPage();
+    // this.refreshPage();
   };
   // refreshPage = () => {
   //   APIManager.getJobDescription(id);
@@ -251,6 +253,7 @@ class ApplyJob extends Component {
     console.log(user_type, 'llll');
     return (
       <div className="responsive-div">
+        {console.log(this.state.id, "IDDDDDDDDD22222222222")}
         <Spin tip="Loading..." spinning={this.state.spinner}>
           {this.state.applymodal ? (
             <ApplyJobModal

@@ -208,6 +208,7 @@ class JobCards extends Component {
                           }
                           >
                           {' '}
+                          {console.log(data, "Data")}
                           {data.candidate.name}
                         </div>
                         <p className="ac-position m-0">{data.candidate.current_position}-{moment(data.applied_at).format("DD MMM YY")}</p>

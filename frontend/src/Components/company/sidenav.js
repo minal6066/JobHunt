@@ -104,14 +104,14 @@ class SideNav extends Component {
           >
             Recruitment
           </h6>
-          <Menu.Item
+          {/* <Menu.Item
             className="sider-nav m-0"
             onClick={this.gotoEditCompanyJobs.bind(this)}
             key="4"
           >
             <img src={process.env.PUBLIC_URL + '/briefcase.png'} />
             &nbsp;&nbsp;Jobs
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item
             className="sider-nav m-0"
             onClick={this.gotoEditCompanyAppliedCandidates.bind(this)}
@@ -120,7 +120,7 @@ class SideNav extends Component {
             <img src={process.env.PUBLIC_URL + '/users.svg'} />
             &nbsp;&nbsp;Applied Candidates
           </Menu.Item>
-          <h6
+          {/* <h6
             className="margin-top-for-side-nav-head bold-family profile-head-font"
             style={{ paddingLeft: 32 }}
           >
@@ -141,7 +141,7 @@ class SideNav extends Component {
           >
             <img src={process.env.PUBLIC_URL + '/page-check.png'} />
             &nbsp;&nbsp;Applied Job
-          </Menu.Item>
+          </Menu.Item> */}
           <h6
             className="margin-top-for-side-nav-head bold-family profile-head-font"
             style={{ paddingLeft: 32 }}

@@ -204,21 +204,10 @@ exports.uploadResume = catchAsync(async (req, res, next) => {
   const candidate = await Candidate.findOne({ can_id: req.decodedData.id });
   /*   console.log(candidate);
     console.log(req.file); */
-  req.body.filename = `resume-${candidate.can_id}-${Date.now()}.${
-    req.files.candidateResume[0].mimetype.split('/')[1]
-  }`;
   // console.log(process.env);
-  const uploadedFile = await aws.s3
-    .upload({
-      Bucket: process.env.AWS_BUCKET,
-      Key: req.body.filename,
-      Body: req.files.candidateResume[0].buffer,
-      ACL: 'public-read',
-    })
-    .promise();
   // console.log(uploadedFile);
   const resumeObj = {
-    name: uploadedFile.key,
+    name: req.body.resume_link,
     title: req.body.title,
     description: req.body.description,
     uploadedAt: Date.now(),

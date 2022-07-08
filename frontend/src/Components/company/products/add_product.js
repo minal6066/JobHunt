@@ -180,39 +180,19 @@ export default class AddProduct extends Component {
 
   saveProduct = (values) => {
     console.log('form data', values);
-    let media = [];
-    this.state.fileName.forEach((data, i) => {
-      media.push({
-        fileName: data,
-        fileType: this.state.contentType,
-      });
-    });
+    
     let data = {
       ...values,
       amount: values.price.amount,
       currency: values.price.currency,
-      media,
+      // media,
     };
     delete data.price;
-    console.log('data in save', data);
 
     if (this.props.history.location.state.product_obj) {
       const id = this.props.history.location.state.product_obj.id;
-      const prevImageArray = this.props.location.state.product_obj
-        ? this.props.location.state.product_obj.media
-        : [];
-      let editmedia = [];
-      this.state.fileName.forEach((data, i) => {
-        editmedia.push({
-          fileName: data,
-          fileType: this.state.contentType,
-        });
-      });
-
-      const EditImageArray = [...prevImageArray, ...editmedia];
       const patchData = {
         ...values,
-        media: EditImageArray,
       };
       console.log('patch data:', patchData);
       APIManager.patchCompanyProduct(id, patchData)
@@ -229,12 +209,7 @@ export default class AddProduct extends Component {
           message.error(error);
         });
     } else {
-      // let form_data = HELPERS.converToFormData(data);
-      // this.state.fileList.forEach((file) => {
-      //   console.log('file:', file);
-      //   form_data.append('productMedia', file, file.name);
-      // });
-      // console.log('data for product addition:', form_data);
+      console.log("Post company Data", data)
       APIManager.postCompanyProduct(data)
         .then((resp) => {
           console.log('post API resp:', resp);

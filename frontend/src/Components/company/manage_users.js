@@ -35,12 +35,24 @@ class ManageUsers extends Component {
     search: '',
   };
   componentDidMount() {
-    // APIManager.getSubUserList();
+    APIManager.getSubUserList().then(
+      (resp) => {
+        if (resp?.data?.status === 'success') {
+          this.setState({
+            sub_users: resp.data.data,
+            resultsPerPage: resp.data.results,
+            totalData: resp.data.totalCount,
+            totalPages: resp.data.totalPages,
+            currentPage: resp.data.currentPage,
+          });
+        }
+      }
+    );;
     this.refreshPage();
   }
 
   async refreshPage() {
-    await this.loadMoreData(1);
+    // await this.loadMoreData(1);
   }
   loadMoreData = (pageNumber = 1, search, sort_by) => {
     // console.log(search,sort_by)
@@ -48,7 +60,7 @@ class ManageUsers extends Component {
     // let search = this.state.search
     APIManager.subuserSortAndSearch(pageNumber, search, sort_by).then(
       (resp) => {
-        if (resp.data.status === 'success') {
+        if (resp?.data?.status === 'success') {
           this.setState({
             sub_users: resp.data.data,
             resultsPerPage: resp.data.results,

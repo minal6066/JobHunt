@@ -230,12 +230,12 @@ class CompanyMedia extends Component {
           <Row>
             <Col span={8}>
               <p className="visit_cand_personal_14">
-                {`$ ${minSalary} Per Anum`}
+                {` ${minSalary} Per Anum`}
               </p>
             </Col>
             <Col span={5}>
               <p className="visit_cand_personal_15">
-                {`$ ${maxSalary} Per Annum`}
+                {`${maxSalary} Per Annum`}
               </p>
             </Col>
           </Row>

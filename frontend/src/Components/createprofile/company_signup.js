@@ -59,7 +59,7 @@ class Companysignup extends Component {
 
   finalSubmit(data) {
     data['user_type'] = this.props.signup_type;
-    data['comp_id'] = this.state.companyId;
+    data['company_id'] = this.state.companyId;
     data['comp_detail'] = { company_name: data['comp_detail'] };
     APIManager.Signup(data)
       .then((response) => {

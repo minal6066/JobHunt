@@ -321,7 +321,7 @@ class Addjob extends Component {
     };
     console.log(data)
     const jobData = this.props.history.location.state;
-    let url = 'https://api.sendbiz.com/add_job';
+    let url = 'http://localhost:3000/add_job';
     var ls = require('local-storage');
     var tok = ls.get('token');
     axios.post(url, params, {

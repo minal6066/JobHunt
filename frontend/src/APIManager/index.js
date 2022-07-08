@@ -63,7 +63,7 @@ class APIManager {
     var tok = ls.get('token');
     console.log(tok);
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json',
@@ -916,7 +916,7 @@ class APIManager {
   CandidateResume = (params) => {
     const authToken = JSON.parse(localStorage.getItem('token') || false);
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
 
       timeout: 10000,
       headers: {
@@ -942,7 +942,7 @@ class APIManager {
     const authToken = JSON.parse(localStorage.getItem('token') || false);
     console.log(authToken);
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
 
       timeout: 10000,
       headers: {
@@ -967,7 +967,7 @@ class APIManager {
   candidateInfoSubmit = (params) => {
     const authToken = JSON.parse(localStorage.getItem('token') || false);
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
 
       timeout: 10000,
       headers: {
@@ -1005,8 +1005,9 @@ class APIManager {
 
   applyForJob = (params) => {
     const authToken = JSON.parse(localStorage.getItem('token') || false);
+    console.log(params, "PARAMS");
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
 
       timeout: 10000,
       headers: {
@@ -1231,7 +1232,7 @@ class APIManager {
   createSubUser = (data) => {
     const authToken = JSON.parse(localStorage.getItem('token') || false);
     this.axiosInstance = axios.create({
-      baseURL: 'https://api.sendbiz.com/',
+      baseURL: 'http://localhost:3000/',
 
       timeout: 10000,
       headers: {
@@ -1439,7 +1440,7 @@ class APIManager {
   subuserSortAndSearch = (page, search, sort_by) => {
     console.log(sort_by);
     return HELPERS.secureRequest({
-      url: `get_sub_user?limit=20&page=${page}${sort_by}&search=${search}`,
+      url: `get_sub_user?limit=20&page=${page}&${sort_by ? sort_by : ''}&search=${search ? search : ''}`,
       method: 'GET',
     });
   };

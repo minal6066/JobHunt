@@ -152,8 +152,8 @@ const PlanCards = (props) => {
           )}
           <div className="plan-heading mt-5">ESSENTIAL PLAN</div>
           <div className="plan-free">
-            <span className="plan-dollar">$</span>
-            <b>15</b>
+            <span className="plan-dollar"></span>
+            <b>150 Rs.</b>
             <span className="plan-month">/MO.</span>
           </div>
           <div className="plan-points" style={{ marginTop: '30px' }}>
