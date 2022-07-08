@@ -197,12 +197,12 @@ class ServiceDetail extends Component {
                 </h4>
                 <p className="s-detail-comp-name">{companyName}</p>
                 <p className="s-detail-short-desc">{shortDescription}</p>
-                {category &&
+                {/* {category &&
                   category.map((cat) => (
                     <Tag color="volcano" className="s-price-tag">
                       {cat}
                     </Tag>
-                  ))}
+                  ))} */}
                 <div>
                   <Row gutter={16} style={{ margin: '40px 0 28px' }}>
                     <Col

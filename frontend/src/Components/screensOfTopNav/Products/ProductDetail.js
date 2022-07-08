@@ -92,7 +92,7 @@ const ProductDetail = (props) => {
                 </h4>
                 {/* <p className='s-detail-comp-name'>{data.companyDetail.comp_info.comp_name}</p> */}
                 <p className="s-detail-short-desc">{data.shortDescription}</p>
-                {data &&
+                {/* {data &&
                   data.category.map((cat) => (
                     <Tag
                       color="volcano"
@@ -101,7 +101,7 @@ const ProductDetail = (props) => {
                     >
                       {cat}
                     </Tag>
-                  ))}
+                  ))} */}
                 <p
                   className="s-detail-val"
                   style={{ fontSize: '24px', margin: '10px 0 5px' }}

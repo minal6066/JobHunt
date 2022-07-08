@@ -162,12 +162,12 @@ class Header extends Component {
                     Events
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <MessageFilled className="top-nav-icons" />
                 </li>
                 <li className="nav-item">
                   <BellFilled className="top-nav-icons" />
-                </li>
+                </li> */}
                 <li className="nav-item" style={{ paddingRight: 0 }}>
                   {/* <a className="nav-link" href="#">
                     {loginStatus ? (
