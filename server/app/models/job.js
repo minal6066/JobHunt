@@ -15,7 +15,7 @@ const jobSchema = new Schema(
     contact: { type: Number, default: '' },
     job_type: { type: String, default: '' },
     location: { type: String, default: '' },
-    category: [{ type: mongoose.Schema.Types.ObjectId, unique: true }],
+    category: [{ type: mongoose.Schema.Types.ObjectId }],
     offer: { type: String, default: '' },
     qualification: { type: String, default: '' },
     min_salary: { type: Number, default: null },

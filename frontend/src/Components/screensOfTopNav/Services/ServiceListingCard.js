@@ -240,9 +240,7 @@ class ServiseListingCard extends Component {
                       <img
                         alt="example"
                         src={
-                          data.media[0]
-                            ? ImageUrl.imageUrlPath + data.media[0].fileName
-                            : 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+                          process.env.PUBLIC_URL + '/Rectangle@2x.png'
                         }
                         style={{ width: '100%', height: '100px' }}
                       />

@@ -109,10 +109,10 @@ class SideNavforCandidate extends Component {
                   </li>
                 </NavLink>
               </ul>
-              <h6 className="margin-top-for-side-nav-head bold-family profile-head-font">
+              {/* <h6 className="margin-top-for-side-nav-head bold-family profile-head-font">
                 Contact
-              </h6>
-              <ul id="menu-content" className="menu-content out">
+              </h6> */}
+              {/* <ul id="menu-content" className="menu-content out">
                 <NavLink to={'/mailbox'}>
                   <li className="sidebar-padding">
                     {isMailBox ? (
@@ -123,7 +123,7 @@ class SideNavforCandidate extends Component {
                     &nbsp;&nbsp;Mailbox
                   </li>
                 </NavLink>
-              </ul>
+              </ul> */}
             </div>
           </div>
       </Row>

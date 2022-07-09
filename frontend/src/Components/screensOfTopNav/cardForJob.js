@@ -91,9 +91,7 @@ class JobCards extends Component {
                     <Image
                       className="job-card-image-1"
                       src={
-                        data.job_logo
-                          ? ImageUrl.imageUrlPath+data.job_logo
-                          : process.env.PUBLIC_URL + '/Rectangle@2x.png'
+                        process.env.PUBLIC_URL + '/Rectangle@2x.png'
                       }
                     />
                   </div>

@@ -34,12 +34,6 @@ app.use(
       'http://localhost:5000/',
       'http://localhost:3001',
       'http://localhost:5000',
-      'http://sendbiz.com/',
-      'http://sendbiz.com',
-      'https://sendbiz.com',
-      'https://sendbiz.com/',
-      'https://www.sendbiz.com',
-      'https://www.sendbiz.com/',
     ],
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     credentials: true,

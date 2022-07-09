@@ -9,5 +9,5 @@ export const fileUrl = {
   fileUrlPath: 'https://sendbizbucket.s3.eu-west-3.amazonaws.com/',
 };
 export const RootUrl = {
-	basePath: 'http://localhost:3000/',
+	basePath: 'https://api.sendbiz.con/',
 };
