@@ -185,7 +185,7 @@ class JobCards extends Component {
               </Row>*/}
               <Card className="services-card">
                 <Row>
-                  <Col span={4}>
+                  {/* <Col span={4}>
                     <img
                       alt="example"
                       src={
@@ -195,7 +195,7 @@ class JobCards extends Component {
                       }
                       style={{ width: '100%', height: '100%' }}
                     />
-                  </Col>
+                  </Col> */}
                   <Col span={16} className="service-detail-row" style={{ paddingLeft: '20px' }}>
                     <Row justify="space-between">
                       <Col span={17}>

@@ -74,7 +74,7 @@ class appliedCandidates extends Component {
               </Row>
             </div>
           </Col>
-          <Col span={1}></Col>
+          {/* <Col span={1}></Col>
           <Col span={4}>
             <button
               className={'Appliedjobbutton'}
@@ -104,8 +104,8 @@ class appliedCandidates extends Component {
               By People
             </button>
           </Col>
-          <Col span={2}></Col>
-          <Col span={4}>
+          <Col span={2}></Col> */}
+          {/* <Col span={4}>
             <button
               className={'Appliedjobbutton'}
               style={{
@@ -118,7 +118,7 @@ class appliedCandidates extends Component {
             >
               Show in Map
             </button>
-          </Col>
+          </Col> */}
         </Row>
         <Card {...this.props} searchingValue={this.state.searchingValue} />
       </div>

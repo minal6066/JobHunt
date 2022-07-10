@@ -189,8 +189,8 @@ export default class AddProduct extends Component {
     };
     delete data.price;
 
-    if (this.props.history.location.state.product_obj) {
-      const id = this.props.history.location.state.product_obj.id;
+    if (this.props.history.location?.state?.product_obj) {
+      const id = this.props.history.location.state?.product_obj?.id;
       const patchData = {
         ...values,
       };

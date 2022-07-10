@@ -240,7 +240,7 @@ let initialValues = {
 														}
 			                  						}
 			                     				 />
-			                     				 <span><img src={process.env.PUBLIC_URL + "/upload.svg"} />&nbsp;&nbsp;UPLOAD RESUME</span>
+			                     				 {/* <span><img src={process.env.PUBLIC_URL + "/upload.svg"} />&nbsp;&nbsp;UPLOAD RESUME</span> */}
 			                     			</label>
 										</div>
 					                	</div>

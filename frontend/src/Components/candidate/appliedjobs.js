@@ -98,9 +98,7 @@ class AppliedJobs extends Component {
                           <img
                             alt="example"
                             src={
-                              val.job_logo
-                                ? ImageUrl.imageUrlPath + val.job_logo
-                                : process.env.PUBLIC_URL + '/rectangle.png'
+                              process.env.PUBLIC_URL + '/Rectangle@2x.png'
                             }
                             style={{ width: '100%', height: '100%' }}
                           />

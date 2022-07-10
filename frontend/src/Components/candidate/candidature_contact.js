@@ -144,7 +144,7 @@ class CandidatureContact extends Component {
 				);
 	          	}}
 			</Formik>
-			<CustomMap lat={lat} long={long} />
+			{/* <CustomMap lat={lat} long={long} /> */}
 			</>
 
 			)

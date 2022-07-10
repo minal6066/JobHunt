@@ -102,9 +102,9 @@ class Profile extends Component {
 										Change Password
 									</button>
 								</li>
-								<li style={{paddingLeft:15}}>
+								{/* <li style={{paddingLeft:15}}>
 									<button className="edit-password">Import from LinkedIn</button>
-								</li>
+								</li> */}
 							</ul>
 							<div className="custom-file view-profile">
 								<label className="custom-file-label-2"
